@@ -1,10 +1,18 @@
+import './assets/css/app.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import HomePage from "./pages/HomePage";
+
 export default function App() {
  
   return (
     <>
       <div>
-        <div className="bg-sky-500/80">
-          <h1 className="text-blue-600">Belajar react tailwind</h1>
+        <div className="App">
+          <Router>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+            </Routes>
+          </Router>
         </div>
       </div>
     </>
